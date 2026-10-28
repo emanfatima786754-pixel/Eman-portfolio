@@ -1,0 +1,556 @@
+/* =====================================
+   EMAN FATIMA - NEON PINK PORTFOLIO
+   Theme: Black, Neon Pink & White
+===================================== */
+
+/* 1. General settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background: #050509;
+    --navbar: #090911;
+    --card: #11111b;
+    --pink: #ff1493;
+    --light-pink: #ff69b4;
+    --white: #f8f8ff;
+    --muted: #b8b8c7;
+    --border: #29202f;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--pink);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: var(--light-pink);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* 2. Navigation bar */
+header,
+.navbar {
+    background: var(--navbar);
+}
+
+nav {
+    min-height: 70px;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: var(--navbar);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    color: var(--white);
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo span,
+.logo strong {
+    color: var(--pink);
+}
+
+nav ul,
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav ul a,
+.nav-links a {
+    color: var(--white);
+    font-size: 14px;
+}
+
+nav ul a:hover,
+.nav-links a:hover {
+    color: var(--pink);
+}
+
+/* 3. Main hero section */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 80px 10%;
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            #241024 0%,
+            #0b0812 35%,
+            #050509 70%
+        );
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 720px;
+}
+
+.tag {
+    display: inline-block;
+    color: var(--light-pink);
+    background: #ff14931a;
+    border: 1px solid #ff149355;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: var(--pink);
+    text-shadow: 0 0 18px #ff149344;
+}
+
+.hero h2 {
+    color: var(--light-pink);
+    font-size: clamp(19px, 3vw, 25px);
+    margin-bottom: 18px;
+}
+
+.hero p {
+    color: var(--muted);
+    margin-bottom: 22px;
+}
+
+/* 4. Profile picture */
+.profile-image {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+    border: 3px solid var(--pink);
+    border-radius: 18px;
+    box-shadow:
+        0 0 12px #ff149366,
+        0 0 30px #ff149322;
+    transition: 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #ff149399;
+}
+
+/* 5. Buttons */
+.btn,
+button {
+    display: inline-block;
+    padding: 11px 20px;
+    margin: 8px 8px 0 0;
+    border: 1px solid var(--pink);
+    border-radius: 8px;
+    background: var(--pink);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover,
+button:hover {
+    background: transparent;
+    color: var(--light-pink);
+    box-shadow: 0 0 18px #ff149366;
+    transform: translateY(-2px);
+}
+
+/* 6. General section styling */
+section:not(.hero) {
+    padding: 75px 10%;
+    background: var(--background);
+}
+
+section h2 {
+    color: var(--white);
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+section h2 span {
+    color: var(--pink);
+}
+
+section p {
+    color: var(--muted);
+}
+
+/* 7. About section */
+#about {
+    border-top: 1px solid #ffffff08;
+}
+
+#about p {
+    max-width: 850px;
+    margin-bottom: 15px;
+}
+
+/* 8. Skills section */
+#skills {
+    background: #08080e;
+}
+
+.skills-container,
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.skill-card,
+.skill,
+.skills-container > div,
+.skills-grid > div {
+    background: var(--card);
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.skill-card:hover,
+.skill:hover,
+.skills-container > div:hover,
+.skills-grid > div:hover {
+    border-color: var(--pink);
+    box-shadow: 0 0 15px #ff149322;
+    transform: translateY(-4px);
+}
+
+.skill-card h3,
+.skill h3 {
+    color: var(--light-pink);
+    margin-bottom: 8px;
+}
+
+/* 9. Projects section */
+.projects-container,
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.project-card,
+.project,
+.projects-container > div,
+.projects-grid > div {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 25px;
+    transition: 0.3s ease;
+}
+
+.project-card:hover,
+.project:hover,
+.projects-container > div:hover,
+.projects-grid > div:hover {
+    border-color: var(--pink);
+    box-shadow: 0 0 20px #ff149322;
+    transform: translateY(-4px);
+}
+
+.project-card h3,
+.project h3 {
+    color: var(--light-pink);
+    margin-bottom: 12px;
+}
+
+.project-card p,
+.project p {
+    margin-bottom: 12px;
+}
+
+/* 10. Contact section */
+#contact {
+    background: #08080e;
+}
+
+#contact form {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 13px 15px;
+    background: var(--card);
+    color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font: inherit;
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--pink);
+    box-shadow: 0 0 10px #ff149322;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9999aa;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* 11. Footer */
+footer {
+    background: var(--navbar);
+    color: var(--muted);
+    padding: 22px 10%;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    font-size: 14px;
+}
+
+footer a {
+    color: var(--pink);
+}
+
+/* 12. Icons and glowing highlights */
+.icon,
+.highlight {
+    color: var(--pink);
+}
+
+::selection {
+    background: var(--pink);
+    color: white;
+}
+
+/* 13. Responsive design for tablets and phones */
+@media (max-width: 700px) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px 5%;
+    }
+
+    nav ul,
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 55px 7%;
+        gap: 30px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    section:not(.hero) {
+        padding: 55px 7%;
+    }
+
+    .skills-container,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-container,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section h2 {
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 950px) {
+    .hero {
+        padding: 65px 6%;
+        gap: 25px;
+    }
+
+    .profile-image {
+        width: 220px;
+        height: 220px;
+    }
+
+    .skills-container,
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+/* Restore separate skill and project boxes */
+
+#skills .skills-container,
+#skills .skills-grid,
+#skills .skill-container,
+#skills .skill-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* Give each skill its own neon card */
+#skills .skill-card,
+#skills .skill,
+#skills .skills-container > div,
+#skills .skills-grid > div,
+#skills .skill-container > div,
+#skills .skill-grid > div {
+    background: #11111b;
+    border: 1px solid #ff1493;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 0 10px #ff149322;
+    transition: 0.3s ease;
+}
+
+#skills .skill-card:hover,
+#skills .skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 18px #ff149355;
+}
+
+/* Restore separate featured project boxes */
+#projects .projects-container,
+#projects .projects-grid,
+#projects .project-container,
+#projects .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+#projects .project-card,
+#projects .project,
+#projects .projects-container > div,
+#projects .projects-grid > div,
+#projects .project-container > div,
+#projects .project-grid > div {
+    background: #11111b;
+    border: 1px solid #ff1493;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 0 10px #ff149322;
+    transition: 0.3s ease;
+}
+
+#projects .project-card:hover,
+#projects .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 18px #ff149355;
+}
+
+/* Make the boxes fit smaller screens */
+@media (max-width: 700px) {
+    #skills .skills-container,
+    #skills .skills-grid,
+    #skills .skill-container,
+    #skills .skill-grid,
+    #projects .projects-container,
+    #projects .projects-grid,
+    #projects .project-container,
+    #projects .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* FIX: Restore the three-card layout */
+
+.cards {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 22px !important;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.card {
+    display: block;
+    background: #11111b !important;
+    border: 1px solid #ff1493 !important;
+    border-radius: 14px;
+    padding: 24px;
+    min-width: 0;
+    box-shadow: 0 0 12px #ff149322;
+    transition: 0.3s ease;
+}
+
+.card h3 {
+    color: #ff69b4 !important;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #f0eaf2 !important;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #ff149355;
+}
+
+/* Responsive layout for mobile screens */
+@media (max-width: 700px) {
+    .cards {
+        grid-template-columns: 1fr !important;
+    }
+}
